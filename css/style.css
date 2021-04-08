@@ -739,7 +739,7 @@ footer {
     width: 85%;
     z-index: 100; }
   .titulo-principal {
-    margin-top: 80%; }
+    margin-top: 70%; }
     .titulo-principal h1 {
       font-family: CircularStd-black;
       font-size: 4rem;
@@ -747,7 +747,7 @@ footer {
   /* Section Servicios cards*/
   .servicios-container {
     background-color: #333333;
-    height: 150vh; }
+    height: 100%; }
     .servicios-container .card {
       height: 21.563rem;
       width: 18.75rem;
