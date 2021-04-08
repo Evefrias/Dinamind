@@ -549,6 +549,11 @@ h2 {
           margin: 1rem;
           font-size: 1rem;
       }
+      p {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
   }
 }
 @media (min-width: 375px) and (max-width: 576px) { 
@@ -705,6 +710,11 @@ h2 {
         }
         h5 {
             margin: 1rem;
+        }
+        p {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
         }
     }
  }

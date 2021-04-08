@@ -715,7 +715,11 @@ footer {
       border-top: 1px solid #FFFFFF; }
     footer h5 {
       margin: 1rem;
-      font-size: 1rem; } }
+      font-size: 1rem; }
+    footer p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; } }
 
 @media (min-width: 375px) and (max-width: 576px) {
   /* Parallax */
@@ -845,7 +849,11 @@ footer {
       border: 0;
       border-top: 1px solid #FFFFFF; }
     footer h5 {
-      margin: 1rem; } }
+      margin: 1rem; }
+    footer p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   h4 {
