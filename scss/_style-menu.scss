@@ -1,0 +1,295 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Work Sans', sans-serif;
+	color: #141417;
+	background: #d0cfc5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h2, .menu__link {
+	font-family: 'Work Sans', sans-serif;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 2px;
+	transition: background-size .4s;
+	&:hover:focus {
+		color: $orange;
+	}
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+/* Icons */
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+svg {
+	font-size: 2rem;
+	fill:  $orange;
+	position: fixed;
+	top: 0;
+	right: 12px;
+	height: 100vh;
+	width: 320px;
+	z-index: 100;
+}
+
+.icon--inline {
+	display: inline-block;
+	width: 1em;
+	height: 100%;
+	margin: 0 0.25em 0 0;
+}
+
+/* Buttons */
+.btn {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: none;
+	color: inherit;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn--trigger {
+	margin: 1em;
+	display: block;
+	white-space: nowrap;
+}
+
+.btn--default,
+.btn--trigger::before {
+	font-weight: bold;
+	border: 2px solid;
+	text-align: center;
+	text-indent: 0;
+	display: inline-block;
+	line-height: 1.7;
+}
+
+.btn--trigger::before {
+	content: 'Press';
+	width: 4em;
+	height: 2em;
+	margin: 0 0.75em;
+}
+
+.btn--trigger:active::before {
+	content: 'Ouch!';
+}
+
+.btn--default {
+	padding: 0 1em;
+	margin: 2vh 0 0;
+}
+
+.btn--tool {
+	display: block;
+	margin: 1em 0;
+	font-size: 1.3em;
+	color: #8a7c78;
+}
+
+.btn--menu {
+	position: absolute;
+	top: 3vw;
+	right: 3vw;
+	color: $orange;
+	pointer-events: visible;
+	margin: 0.7rem;
+}
+
+.btn--close {
+	position: absolute;
+	top: 3vw;
+	right: 3vw;
+	font-size: 0.75em;
+	z-index: 100;
+}
+
+/* Menu */
+div {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	.menu {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: 320px;
+		z-index: 100;
+	}
+	.menu-logo {
+		position: fixed;
+		width: 320px;
+		z-index: 0;
+	}
+}
+
+.js .menu {
+	pointer-events: none;
+}
+
+.js .menu--open {
+	pointer-events: visible;
+}
+
+.menu .block-revealer__content {
+	height: 100%;
+	position: relative;
+	
+}
+.block-revealer__element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.menu__inner {
+	width: 100%;
+	height: 100%;
+	list-style-type: none;
+	padding: 20vh 3em;
+	margin: 0;
+	background: #333333;
+	overflow: hidden;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.menu__item {
+	padding: 0.15em;
+}
+
+
+.js .menu__item {
+	transform: translate3d(-13em,0,0);
+	transition: transform 0s 0.4s;
+}
+
+.btn--close {
+	opacity: 0;
+	margin: 0.7rem;
+}
+
+
+.menu--open .menu__item,
+.menu--open .btn--close {
+	color: #F59401;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+	transition: opacity 0.4s 0.135s, transform 0.4s 0.135s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.menu--open .menu__item:nth-child(2) {
+	transition-delay: 0.195s;
+}
+
+.menu--open .menu__item:nth-child(3) {
+	transition-delay: 0.225s;
+}
+
+.menu--open .menu__item:nth-child(4) {
+	transition-delay: 0.255s;
+}
+.menu--open .menu__item:nth-child(5) {
+	transition-delay: 0.285s;
+}
+
+.menu .menu__link {
+	font-size: 1rem;
+	color: #F3F3F3;
+	margin-bottom: 5%;
+}
+
+.menu .menu__link:hover,
+.menu .menu__link:focus {
+	outline: none;
+	color: #F59401;
+	text-decoration: underline;
+}
+
+
+.media__toolbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	padding: 2.15em;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.js .btn--tool {
+	opacity: 0;
+	pointer-events: none;
+	transform: translate3d(200%,0,0);
+	transition: opacity 0.6s 0.28s, transform 0.6s 0.28s;
+	transition-timing-function: ease, cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.js .btn--tool:nth-child(2) {
+	transition-delay: 0.32s;
+}
+
+.js .btn--tool:nth-child(3) {
+	transition-delay: 0.34s;
+}
+
+.media__toolbar--show .btn--tool{
+	opacity: 1;
+	pointer-events: visible;
+	transform: translate3d(0,0,0);
+}
+
+
+@media screen and (max-width: 62em) {
+	
+	.menu .menu__link {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		display: flex;
+		justify-content: space-evenly;
+	}
+}

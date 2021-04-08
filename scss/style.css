@@ -1,0 +1,62 @@
+/* colores web dinamind */
+@font-face {
+  font-family: CircularStd-black;
+  src: url(../assets/fonts/CircularStd-Black.ttf);
+}
+
+body {
+  background-color: #F3F3F3;
+  font-family: 'Work Sans', sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F59401;
+  background-image: linear-gradient(315deg, #F59401 0%, #f5df2e 74%);
+  border-radius: 0 15px 0 15px;
+}
+
+#map {
+  height: 100%;
+}
+
+.navbar-dark.bg-dark {
+  background-color: #333333 !important;
+  font-size: 18px;
+}
+
+.navbar-dark.bg-dark .nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  -webkit-transition: background-size .4s;
+  transition: background-size .4s;
+}
+
+.navbar-dark.bg-dark .nav-link:hover, .navbar-dark.bg-dark .nav-link:focus {
+  color: #F59401;
+  background-size: 100% 2px;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-dark .navbar-toggler {
+  color: #F59401;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+/*# sourceMappingURL=style.css.map */

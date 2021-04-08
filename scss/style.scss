@@ -1,0 +1,888 @@
+@import "colores";
+@import "style-menu";
+@font-face {
+    font-family: CircularStd-black;
+    src: url(../assets/fonts/CircularStd-Black.ttf);
+}
+body {
+    background-color: $grey-light;
+    font-family: 'Work Sans', sans-serif;
+    color: $grey;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 0.75rem;
+  } 
+::-webkit-scrollbar-thumb {    
+    background-color: #F59401;
+    background-image: linear-gradient(315deg, #F59401 0%, #f5df2e 74%);
+    border-radius: 0 0.938rem 0 0.938rem;
+  }
+  #map {
+    height: 100%;
+  }
+
+  /* Parallax */ 
+.parallax-completo{
+    width: 100%;
+    height:100vh;
+    background-image: url("../assets/img/portada-parallax.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   /*  background-attachment: fixed; */  
+}
+.parallax-hacemos{
+    width: 100%;
+    height:100vh;
+    background-image: url("../assets/img/parallax-hacemos.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ /* Navbar */ 
+.navbar-dark.bg-dark {
+    background-color:  transparent !important;
+    font-weight: 600;
+    font-size: 1.125rem;
+
+    .nav-link {
+            color: $white;
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .4s;
+            &:hover, &:focus {
+            color: $orange;
+            background-size: 100% 2px;
+    }
+    }
+}
+.navbar-nav .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    border: none;
+}
+.navbar-dark .navbar-toggler {
+    color: $orange;
+    border-color: rgba(255,255,255,.1);
+}
+
+/* Titulos & párrafos */
+h1 {
+    font-family: CircularStd-black;
+    font-size: 7.5rem;
+    line-height: 7.5rem;
+}
+
+h2 {
+    font-family: CircularStd-black;
+    font-size: 3.563rem;
+    line-height: 3.563rem;
+}
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 0.875rem;
+}
+span {
+    font-weight: 500;
+}
+a {
+    color: $white;
+    &:hover {
+        color: $orange;
+    }
+}
+.white {
+    color: $white;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 1;
+}
+
+/*  ICONOS BOOTSTRAP */
+.redes-sociales {
+    display: flex;
+    justify-content: flex-start;
+
+}
+.bi { 
+    margin-right: 0.938rem;
+    font-size: 1.875rem;
+    color: $white !important;
+
+    &:hover {
+      color: $orange !important;
+
+    }
+}
+ul {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    li {
+        display: inline-block;
+        direction: row;
+    }
+}
+svg {
+    &:hover {
+        color: $orange;
+    }
+}
+
+/* Section portada */ 
+.titulo-principal {
+    margin-top: 10%;
+}
+
+/* Section que hacemos */ 
+.titulos-verticales-grey {
+    transform: rotate(270deg) translate(-300px, 0);
+    color: $grey;
+    display: flex;
+    justify-content: flex-start;    
+    position: relative;
+    h2 {
+        font-family: CircularStd-black;
+        font-size: 3.563rem;
+        line-height: 3.563rem;
+    }
+    .estilos-hr-grey {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 43.25rem;
+        border: 0;
+        border-top: 1px solid $grey; 
+    }
+}   
+/* Section brindamos soluciones */
+    .soluciones-container {
+        background-color: $grey-light;
+        overflow: hidden;
+        width: 100%;
+        height: 43.75rem;
+        border: none;
+        background-image: url("../assets/img/soluciones-mecanicas.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    }
+/* Section Servicios cards*/
+    .servicios-container {
+        background-color: $grey;
+        height: 100vh;
+
+        .titulos-verticales-white {
+            transform: rotate(270deg) translate(-300px, 0);
+            color: $white;
+            display: flex;
+            justify-content: flex-start;    
+            position: relative;
+            h2 {
+                font-family: CircularStd-black;
+                font-size: 3.563rem;
+                line-height: 3.563rem;
+            }
+            .estilos-hr-white {
+                margin-top: 1rem;
+                width: 33.25rem;
+                border: 0;
+                border-top: 2px solid $white; 
+                opacity: 1;
+            }
+        }   
+
+        .card {
+            height: 21.563rem; 
+            margin-left: 2%;
+            margin-right: 2%;
+            padding-bottom: 2%;
+            border: 0;
+            border-radius: 95px 0 95px 0;
+            box-shadow: 2px 2px 16px #0000001e;
+            overflow: hidden;
+
+            .card-img-top {
+                border-top-left-radius: 95px;
+                border-top-right-radius: 0px;
+            }
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        }
+        .versalitas {
+            font-family: CircularStd-black;
+            font-variant: small-caps;
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .4s;
+            color: $orange;
+            &:hover, &:focus {
+            background-size: 100% 2px;
+            color: $orange;   
+            }
+        }
+    }
+ /* Section feedback */ 
+    .frase-container {
+        height: 80vh;
+        background-color: $grey-light;  
+    }
+/* cards-feedback-desktop */ 
+    .cards-feedback {
+        background-color: $grey;
+        border-radius: 0 396px 0 0;
+        height: 456px;
+        width: 100%;    
+
+        .users-img {
+            width: 50%;
+            margin-top: 8%;
+            margin-bottom: 5%;
+        }
+
+        .client-card {
+            position: absolute;
+            width: 100%;
+            height: 500px;   
+            transform: translate(0%, -38%);     
+            .card {
+                margin-top: 5%;
+                margin-right: 2%;
+                width: 520px;
+                height: 405px;
+                border: 0;
+                border-radius: 50px 0 50px 0;
+                box-shadow: 2px 2px 16px #0000001e;
+                display: flex;
+                align-items: center;
+            }   
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+        }   
+    }
+/* Section acerca */
+.acerca-container {
+    height: 100%;
+    background-color: $grey;
+    color: $white;
+    padding-bottom: 15%;
+   
+    .titulos-verticales-white {
+        transform: rotate(270deg) translate(-300px, 0);
+        color: $white;
+        display: flex;
+        justify-content: flex-start;    
+        position: relative;
+        h2 {
+            font-family: CircularStd-black;
+            font-size: 3.563rem;
+            line-height: 3.563rem;
+        }
+        .estilos-hr-white {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 34.25rem;
+            border: 0;
+            border-top: 1px solid $white; 
+        }
+    }   
+}
+/* Section contacto */
+    .contacto-container {
+        background-color: $grey;
+        height: 100vh;
+        padding-bottom: 10%;
+        color: $white;
+        .titulos-verticales-white {
+            transform: rotate(270deg) translate(-450px, 0);
+            color: $white;
+            display: flex;
+            justify-content: flex-start;    
+            position: relative;
+            h2 {
+                font-family: CircularStd-black;
+                font-size: 3.563rem;
+                line-height: 3.563rem;
+            }
+            .estilos-hr-white {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                width: 34.25rem;
+                border: 0;
+                border-top: 1px solid $white; 
+            }
+        }   
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+        }
+        .bi { 
+            margin: 15px;
+            font-size: 50px;
+            color: #333333 !important;
+            transform: translate(35px, -39px);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+          
+            &:hover {
+              color: $orange !important;
+        
+            }
+        }
+    }
+    /*footer*/ 
+    footer {
+        background-color: $grey;
+        padding-bottom: 5%;
+        .vertical-hr {
+            padding-top: 2%;
+            margin-bottom: 1rem;
+            width: 90vw;
+            border: 0;
+            border-top: 1px solid $white; 
+        }
+        h5 {
+            margin: 1rem;
+        }
+    }
+    /* ANIMACIONES */
+    .animate__animated .animate__fadeInLeft {
+        --animate-duration: 15s;
+    }
+    
+    .spin-animation {
+        animation: spin 25s linear infinite;
+    }
+    @keyframes spin {
+        100% {transform: rotate(360deg);}
+    }
+
+/*-------------------------------------BREAKPOINTS--------------------------------------------------*/
+@media (min-width: 320px) and (max-width: 374px) { 
+    /* Parallax */ 
+  .parallax-completo{
+  width: 100%;
+  height:100vh;
+  background-image: url("../assets/img/background-color.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+ /*  background-attachment: fixed; */  
+}
+h2 {
+  font-size: 2.563rem;
+  line-height: 2.563rem;
+}
+
+  div .menu-logo {
+      position: fixed;
+      width: 85%;
+      z-index: 100;
+  }
+  .titulo-principal {
+      margin-top: 70%;
+      h1 {
+          font-family: CircularStd-black;
+          font-size: 3rem;
+          line-height: 3rem;
+      }
+  }
+  /* Section Servicios cards*/
+  .servicios-container {
+      background-color: $grey;
+      height: 100%;
+      .card {
+          height: 21.563rem; 
+          width: 18.75rem;
+          margin-top: 5%;
+          padding-bottom: 2%;
+          border: 0;
+          border-radius: 95px 0 95px 0;
+          box-shadow: 2px 2px 16px #0000001e;
+          overflow: hidden;
+      }
+  }
+  /* Section brindamos soluciones */
+  .soluciones-container {
+      background-color: $grey-light;
+      overflow: hidden;
+      width: 100%;
+      height: 100vh;
+      background-image: url("../assets/img/soluciones-mobile.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+  /* Section Servicios cards mobile*/
+  .cards-feedback-mobile {
+      background-color: $grey;
+      border-radius: 0 396px 0 0;
+      height: 100%;
+      width: 100%;    
+          .carousel-inner {
+              position: relative;
+              width: 100%;
+              overflow: hidden;
+              display: flex;
+              justify-content: flex-start;
+              margin-left: 4%;
+              .card {
+                  height: 26.25rem;
+                  margin-top: 5%;
+                  border: 0;
+                  border-radius: 95px 0 95px 0;
+                  box-shadow: 2px 2px 16px #0000001e;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              .users-img {
+                  width: 50%;
+                  margin-top: 8%;
+                  margin-bottom: 5%;
+              }
+              .card-body {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: center;
+              }
+              }   
+          }
+      }
+   /* Section contacto */
+  .contacto-container {
+      background-color: $grey;
+      height: 100%;
+      padding-bottom: 10%;
+      color: $white;
+
+      .titulos-verticales-white {
+          transform: rotate(270deg) translate(-450px, 0);
+          color: $white;
+          display: flex;
+          justify-content: flex-start;    
+          position: relative;
+          h2 {
+              font-family: CircularStd-black;
+              font-size: 3.563rem;
+              line-height: 3.563rem;
+          }
+          .estilos-hr-white {
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              width: 34.25rem;
+              border: 0;
+              border-top: 1px solid $white; 
+          }
+      }   
+      h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          padding: 0;
+          margin: 0;
+      }
+      .bi { 
+          margin: 15px;
+          font-size: 50px;
+          color: #333333 !important;
+          transform: translate(35px, -39px);
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+        
+          &:hover {
+            color: $orange !important;
+      
+          }
+      }
+  }
+   /*footer*/ 
+   footer {
+      background-color: $grey;
+      padding-bottom: 5%;
+      .vertical-hr {
+          padding-top: 2%;
+          margin-bottom: 1rem;
+          width: 90vw;
+          border: 0;
+          border-top: 1px solid $white; 
+      }
+      h5 {
+          margin: 1rem;
+          font-size: 1rem;
+      }
+  }
+}
+@media (min-width: 375px) and (max-width: 576px) { 
+      /* Parallax */ 
+    .parallax-completo{
+    width: 100%;
+    height:100vh;
+    background-image: url("../assets/img/background-color.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   /*  background-attachment: fixed; */  
+}
+h2 {
+    font-size: 2.563rem;
+    line-height: 2.563rem;
+}
+
+    div .menu-logo {
+        position: fixed;
+        width: 85%;
+        z-index: 100;
+    }
+    .titulo-principal {
+        margin-top: 80%;
+        h1 {
+            font-family: CircularStd-black;
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+    }
+    /* Section Servicios cards*/
+    .servicios-container {
+        background-color: $grey;
+        height: 150vh;
+        .card {
+            height: 21.563rem; 
+            width: 18.75rem;
+            margin-top: 5%;
+            padding-bottom: 2%;
+            border: 0;
+            border-radius: 95px 0 95px 0;
+            box-shadow: 2px 2px 16px #0000001e;
+            overflow: hidden;
+        }
+    }
+    /* Section brindamos soluciones */
+    .soluciones-container {
+        background-color: $grey-light;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        background-image: url("../assets/img/soluciones-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    /* Section Servicios cards mobile*/
+    .cards-feedback-mobile {
+        background-color: $grey;
+        border-radius: 0 396px 0 0;
+        height: 100%;
+        width: 100%;    
+            .carousel-inner {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: flex-start;
+                margin-left: 13%;
+                .card {
+                    height: 26.25rem;
+                    margin-top: 5%;
+                    border: 0;
+                    border-radius: 95px 0 95px 0;
+                    box-shadow: 2px 2px 16px #0000001e;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                .users-img {
+                    width: 50%;
+                    margin-top: 8%;
+                    margin-bottom: 5%;
+                }
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                }   
+            }
+        }
+     /* Section contacto */
+    .contacto-container {
+        background-color: $grey;
+        height: 100%;
+        padding-bottom: 10%;
+        color: $white;
+
+        .titulos-verticales-white {
+            transform: rotate(270deg) translate(-450px, 0);
+            color: $white;
+            display: flex;
+            justify-content: flex-start;    
+            position: relative;
+            h2 {
+                font-family: CircularStd-black;
+                font-size: 3.563rem;
+                line-height: 3.563rem;
+            }
+            .estilos-hr-white {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                width: 34.25rem;
+                border: 0;
+                border-top: 1px solid $white; 
+            }
+        }   
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+        }
+        .bi { 
+            margin: 15px;
+            font-size: 50px;
+            color: #333333 !important;
+            transform: translate(35px, -39px);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+          
+            &:hover {
+              color: $orange !important;
+        
+            }
+        }
+    }
+     /*footer*/ 
+     footer {
+        background-color: $grey;
+        padding-bottom: 5%;
+        .vertical-hr {
+            padding-top: 2%;
+            margin-bottom: 1rem;
+            width: 90vw;
+            border: 0;
+            border-top: 1px solid $white; 
+        }
+        h5 {
+            margin: 1rem;
+        }
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 991px) { 
+    h4 {
+        font-size: 1.2rem;
+    }
+    div .menu-logo {
+        position: fixed;
+        width: 86%;
+        z-index: 100;
+    }
+    .titulo-principal {
+        margin-top: 50%;
+        h1 {
+            font-family: CircularStd-black;
+            font-size: 4.5rem;
+            line-height: 4.5rem;
+        }
+    }
+     /* Section brindamos soluciones */
+     .soluciones-container {
+        background-color: $grey-light;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+    }
+     /* Section Servicios cards*/
+     .servicios-container {
+        background-color: $grey;
+        height: auto;
+
+        .card {   
+            position: relative;
+            margin-top: 5%;
+            margin-left: 2%;
+            margin-right: 2%;
+            padding-bottom: 2%;
+            border: 0;
+            border-radius: 95px 0 95px 0;
+            box-shadow: 2px 2px 16px #0000001e;
+            overflow: hidden;
+            
+            .card-img-top {
+                border-top-left-radius: 95px;
+                border-top-right-radius: 0px;
+            }
+            .card-body {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .versalitas {
+            font-family: CircularStd-black;
+            font-variant: small-caps;
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .4s;
+            color: $orange;
+            &:hover, &:focus {
+            background-size: 100% 2px;
+            color: $orange;   
+            }
+        }
+    }
+    
+    /* Section contacto */
+    .contacto-container {
+        background-color: $grey;
+        height: 100%;
+        padding-bottom: 10%;
+        color: $white;
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+        }
+        .bi { 
+            margin: 15px;
+            font-size: 50px;
+            color: #333333 !important;
+            transform: translate(35px, -39px);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+          
+            &:hover {
+              color: $orange !important;
+        
+            }
+        }
+    }
+ }
+
+
+ @media (min-width: 992px) and (max-width: 1399px) {
+    .titulo-principal {
+        margin-top: 5%;
+        h1 {
+            font-family: CircularStd-black;
+            font-size: 7.5rem;
+            line-height: 7.5rem;
+        }
+    }
+    /* Section que hacemos */ 
+    .titulos-verticales-grey {
+        transform: rotate(270deg) translate(-200px, 0);
+        color: $grey;
+        display: flex;
+        justify-content: flex-start;    
+        position: relative;
+        h2 {
+            font-family: CircularStd-black;
+            font-size: 3.563rem;
+            line-height: 3.563rem;
+        }
+    .estilos-hr-grey {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 33.25rem;
+        border: 0;
+        border-top: 2px solid $grey; 
+        }
+    }   
+    /* Section contacto */
+    .contacto-container {
+        background-color: $grey;
+        height: 100%;
+        padding-bottom: 10%;
+        color: $white;
+        .titulos-verticales-white {
+            transform: rotate(270deg) translate(-450px, 0);
+            color: $white;
+            display: flex;
+            justify-content: flex-start;    
+            position: relative;
+            h2 {
+                font-family: CircularStd-black;
+                font-size: 3.563rem;
+                line-height: 3.563rem;
+            }
+            .estilos-hr-white {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                width: 34.25rem;
+                border: 0;
+                border-top: 1px solid $white; 
+            }
+        }   
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+        }
+        .bi { 
+            margin: 15px;
+            font-size: 50px;
+            color: #333333 !important;
+            transform: translate(35px, -39px);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+          
+            &:hover {
+              color: $orange !important;
+        
+            }
+        }
+    }
+ }

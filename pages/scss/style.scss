@@ -1,0 +1,624 @@
+@import "colores";
+@import "style-menu";
+@font-face {
+    font-family: CircularStd-black;
+    src: url("../assets/fonts/CircularStd-Black.ttf");
+}
+body {
+    background-color: $grey-light;
+    font-family: 'Work Sans', sans-serif;
+    color: $grey;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 0.75rem;
+  } 
+::-webkit-scrollbar-thumb {    
+    background-color: #F59401;
+    background-image: linear-gradient(315deg, #F59401 0%, #f5df2e 74%);
+    border-radius: 0 0.938rem 0 0.938rem;
+  }
+
+  /* Parallax */ 
+.parallax-ingenieria {
+    margin-top: 0;
+    width: 100%;
+    height:100vh;
+    background-image: url("../assets/img/ingenieria-parallax.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+.parallax-mantenimiento{
+    width: 100%;
+    height:100vh;
+    background-image: url("../assets/img/mantenimiento-parallax.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+.parallax-mantenimiento-frase {
+    width: 100%;
+    height:60vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: url("../assets/img/mantenimiento.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+.parallax-montajes {
+    width: 100%;
+    height:100vh;
+    background-image: url("../assets/img/montajes-parallax.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+ /* Navbar */ 
+.navbar-dark.bg-dark {
+    background-color:  transparent !important;
+    font-weight: 600;
+    font-size: 1.125rem;
+
+    .nav-link {
+            color: $white;
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .4s;
+            &:hover, &:focus {
+            color: $orange;
+            background-size: 100% 2px;
+    }
+    }
+}
+
+/* Titulos & párrafos */
+h1 {
+    font-family: CircularStd-black;
+    font-size: 7.5rem;
+    line-height: 7.5rem;
+}
+
+h2 {
+    font-family: CircularStd-black;
+    font-size: 3.563rem;
+    line-height: 3.563rem;
+}
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.125rem;
+}
+span {
+    font-weight: 500;
+}
+a {
+    color: $white;
+    &:hover {
+        color: $orange;
+    }
+}
+.white {
+    color: $white;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 1;
+}
+
+/*  ICONOS BOOTSTRAP */
+.redes-sociales {
+    display: flex;
+    justify-content: flex-start;
+
+}
+.bi { 
+    margin-right: 0.938rem;
+    font-size: 1.875rem;
+    color: $white !important;
+
+    &:hover {
+      color: $orange !important;
+
+    }
+}
+ul {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    li {
+        display: inline-block;
+        direction: row;
+    }
+}
+svg {
+    &:hover {
+        color: $orange;
+    }
+}
+
+/* Section portada */ 
+.titulo-principal {
+    margin-top: 12%;
+}
+
+.titulo-principal-montajes {
+    margin-top: 7%;
+}
+
+/* Titutlos verticales */ 
+.titulos-verticales-grey {
+    transform: rotate(270deg) translate(-880px, 0);
+    color: $grey;
+    display: flex;
+    justify-content: flex-start;    
+    position: relative;
+    h2 {
+        font-family: CircularStd-black;
+        font-size: 3.563rem;
+        line-height: 3.563rem;
+    }
+    .hr-grey {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 43.25rem;
+        border: 0;
+        border-top: 1px solid $grey; 
+    }
+}   
+.titulos-verticales-ingenieria {
+    transform: rotate(270deg) translate(-880px, 0);
+    color: $grey;
+    display: flex;
+    justify-content: flex-start;    
+    position: relative;
+    h2 {
+        font-family: CircularStd-black;
+        font-size: 3.563rem;
+        line-height: 3.563rem;
+    }
+    .hr-grey {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 43.25rem;
+        border: 0;
+        border-top: 1px solid $grey; 
+    }
+}   
+.titulos-verticales-mantenimiento {
+    transform: rotate(270deg) translate(-819px, 0);
+    color: $grey;
+    display: flex;
+    justify-content: flex-start;    
+    position: relative;
+    h2 {
+        font-family: CircularStd-black;
+        font-size: 3.563rem;
+        line-height: 3.563rem;
+    }
+    .hr-grey {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 43.25rem;
+        border: 0;
+        border-top: 1px solid $grey; 
+    }
+}   
+
+/* Section descripcion */
+    .descripcion-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-color: $grey;
+        height: 100%;
+
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+   
+/* Section Servicios*/
+  .servicios-section {
+      height: 100%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      .numeros {
+          color: $orange;
+          font-size: 6.563rem;
+          padding-bottom: 1rem;
+      }
+      .titulos-verticales-grey {
+        transform: rotate(270deg) translate(-880px, 0);
+        color: $grey;
+        display: flex;
+        justify-content: flex-start;    
+        position: relative;
+        h2 {
+            font-family: CircularStd-black;
+            font-size: 3.563rem;
+            line-height: 3.563rem;
+        }
+        .hr-grey {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 62rem;
+            border: 0;
+            border-top: 1px solid $grey; 
+        }
+    }   
+  }
+  .descripcion-mantenimiento-section {
+      height: 500px;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      background-color: $grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+ /* Section contacto */
+    .contacto-section {
+        height: 100%;
+        background-color: $grey;
+        h2 {
+            font-size: 2rem;
+        }
+        a {
+            font-size: 2rem;
+        }
+         .bi { 
+            margin: 15px;
+            font-size: 50px;
+            color: #333333 !important;
+            transform: translate(35px, -39px);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+          
+            &:hover {
+              color: $orange !important;
+        
+            }
+        }
+    } 
+  
+/*footer*/ 
+    footer {
+        background-color: $grey;
+        padding-bottom: 5%;
+        .vertical-hr {
+            padding-top: 2%;
+            margin-bottom: 1rem;
+            width: 90vw;
+            border: 0;
+            border-top: 1px solid $white; 
+        }
+        h5 {
+            margin: 1rem;
+        }
+    }
+    /* ANIMACIONES */
+    .animate__animated .animate__fadeInLeft {
+        --animate-duration: 15s;
+    }
+    
+    .spin-animation {
+        animation: spin 25s linear infinite;
+    }
+    @keyframes spin {
+        100% {transform: rotate(360deg);}
+    }
+
+/* BREAKPOINTS */
+@media (min-width: 320px) and (max-width: 576px) { 
+
+    .titulo-principal {
+        margin-top: 78%;
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    .titulo-principal-montajes {
+        margin-top: 50%;
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: normal;
+    }
+
+    h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    }
+
+  div .menu-logo {
+      position: fixed;
+      width: 85%;
+      z-index: 100;
+  }
+
+  /* Section Servicios */
+  .servicios-section {
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    .numeros {
+        color: $orange;
+        font-size: 5rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    } 
+}
+    /* Section contacto */
+    .contacto-section {
+        height: 100%;
+        background-color: $grey;
+    
+        h2 {
+            font-size: 1rem;
+        }
+        a {
+            font-size: 1.5rem;
+        }
+        
+        .bi { 
+            margin: 15px;
+            font-size: 50px;
+            color: #333333 !important;
+            transform: translate(35px, -39px);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        
+            &:hover {
+            color: $orange !important;
+            }
+        }
+        h5 {
+            font-size: 0.5rem;
+        }
+     }
+     
+     footer {
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+     }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+    
+    .titulo-principal-montajes {
+        margin-top: 15%;
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h2 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        }
+
+    div .menu-logo {
+        position: fixed;
+        width: 86%;
+        z-index: 100;
+    }
+
+    .titulo-principal {
+        margin-top: 45%;
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+        }
+    }
+
+    .titulo-principal-montajes {
+        margin-top: 78%;
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+    }
+      /* Section Servicios */
+    .servicios-section {
+        height: 100%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+        .numeros {
+            color: $orange;
+            font-size: 5rem;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        } 
+    }
+
+    /*Footer*/ 
+    footer {
+        p {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1399px) { 
+/*pagina servicios ingenieria */ 
+    .titulo-principal {
+        margin-top: 5%;
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+        }
+    }
+    .titulo-principal-montajes {
+        margin-top: 5%;
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+        }
+    }
+    /* Section Servicios*/
+    .servicios-section {
+        height: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        .numeros {
+            color: $orange;
+            font-size: 6.563rem;
+            padding-bottom: 1rem;
+        }
+        .titulos-verticales-grey {
+            transform: rotate(270deg) translate(-790px, 0);
+            color: $grey;
+            display: flex;
+            justify-content: flex-start;    
+            position: relative;
+            h2 {
+                font-family: CircularStd-black;
+                font-size: 3.563rem;
+                line-height: 3.563rem;
+            }
+            .hr-grey {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                width: 55rem;
+                border: 0;
+                border-top: 1px solid $grey; 
+            }
+        }   
+        .titulos-verticales-ingenieria {
+        transform: rotate(270deg) translate(-740px, 0);
+        color: $grey;
+        display: flex;
+        justify-content: flex-start;    
+        position: relative;
+        h2 {
+            font-family: CircularStd-black;
+            font-size: 3.563rem;
+            line-height: 3.563rem;
+        }
+        .hr-grey {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 55rem;
+            border: 0;
+            border-top: 1px solid $grey; 
+        }
+    }   
+    }
+ /*pagina servicios mantenimiento */
+    .parallax-mantenimiento-frase {
+        h2 {
+            padding-top: 5%;
+            padding-bottom: 5%;
+        }
+    }
+
+}
+@media (min-width: 1400px) { 
+/* Titutlos verticales */ 
+    .titulos-verticales-grey {
+        transform: rotate(270deg) translate(-880px, 0);
+        color: $grey;
+        display: flex;
+        justify-content: flex-start;    
+        position: relative;
+        h2 {
+            font-family: CircularStd-black;
+            font-size: 3.563rem;
+            line-height: 3.563rem;
+        }
+        .hr-grey {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 43.25rem;
+            border: 0;
+            border-top: 1px solid $grey; 
+        }
+    }   
+    .titulos-verticales-ingenieria {
+        transform: rotate(270deg) translate(-700px, 0);
+        color: $grey;
+        display: flex;
+        justify-content: flex-start;    
+        position: relative;
+        h2 {
+            font-family: CircularStd-black;
+            font-size: 3.563rem;
+            line-height: 3.563rem;
+        }
+        .hr-grey {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 52.25rem;
+            border: 0;
+            border-top: 1px solid $grey; 
+        }
+    }   
+    .titulos-verticales-mantenimiento {
+        transform: rotate(270deg) translate(-680px, 0);
+        color: $grey;
+        display: flex;
+        justify-content: flex-start;    
+        position: relative;
+        h2 {
+            font-family: CircularStd-black;
+            font-size: 3.563rem;
+            line-height: 3.563rem;
+        }
+        .hr-grey {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 52rem;
+            border: 0;
+            border-top: 1px solid $grey; 
+        }
+    }   
+}
