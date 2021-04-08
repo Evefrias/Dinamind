@@ -166,6 +166,9 @@ svg {
 .titulo-principal-montajes {
     margin-top: 7%;
 }
+.titulo-principal-mantenimiento {
+    margin-top: 12%;
+}
 
 /* Titutlos verticales */ 
 .titulos-verticales-grey {
@@ -304,6 +307,32 @@ svg {
             }
         }
     } 
+    .contacto-mantenimiento {
+        height: 100%;
+        background-color: $grey;
+        h2 {
+            font-size: 2rem;
+        }
+        a {
+            font-size: 2rem;
+        }
+         .bi { 
+            margin: 15px;
+            font-size: 50px;
+            color: #333333 !important;
+            transform: translate(35px, -39px);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+          
+            &:hover {
+              color: $orange !important;
+        
+            }
+        }
+    } 
   
 /*footer*/ 
     footer {
@@ -336,7 +365,7 @@ svg {
 @media (min-width: 320px) and (max-width: 576px) { 
 
     .titulo-principal {
-        margin-top: 78%;
+        margin-top: 40%;
 
         h1 {
             font-size: 2.5rem;
@@ -345,6 +374,14 @@ svg {
     }
 
     .titulo-principal-montajes {
+        margin-top: 40%;
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+    }
+    .titulo-principal-mantenimiento {
         margin-top: 40%;
 
         h1 {
@@ -392,6 +429,36 @@ svg {
         }
         a {
             font-size: 1.5rem;
+        }
+        
+        .bi { 
+            margin: 15px;
+            font-size: 50px;
+            color: #333333 !important;
+            transform: translate(35px, -39px);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        
+            &:hover {
+            color: $orange !important;
+            }
+        }
+        h5 {
+            font-size: 0.5rem;
+        }
+     }
+     .contacto-mantenimiento {
+        height: 100%;
+        background-color: $grey;
+    
+        h2 {
+            font-size: 1rem;
+        }
+        a {
+            font-size: 1.2rem;
         }
         
         .bi { 

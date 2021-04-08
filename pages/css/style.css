@@ -394,6 +394,9 @@ svg:hover {
 .titulo-principal-montajes {
   margin-top: 7%; }
 
+.titulo-principal-mantenimiento {
+  margin-top: 12%; }
+
 /* Titutlos verticales */
 .titulos-verticales-grey {
   transform: rotate(270deg) translate(-880px, 0);
@@ -511,6 +514,26 @@ svg:hover {
     .contacto-section .bi:hover {
       color: #F59401 !important; }
 
+.contacto-mantenimiento {
+  height: 100%;
+  background-color: #333333; }
+  .contacto-mantenimiento h2 {
+    font-size: 2rem; }
+  .contacto-mantenimiento a {
+    font-size: 2rem; }
+  .contacto-mantenimiento .bi {
+    margin: 15px;
+    font-size: 50px;
+    color: #333333 !important;
+    transform: translate(35px, -39px);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; }
+    .contacto-mantenimiento .bi:hover {
+      color: #F59401 !important; }
+
 /*footer*/
 footer {
   background-color: #333333;
@@ -538,13 +561,18 @@ footer {
 /* BREAKPOINTS */
 @media (min-width: 320px) and (max-width: 576px) {
   .titulo-principal {
-    margin-top: 78%; }
+    margin-top: 40%; }
     .titulo-principal h1 {
       font-size: 2.5rem;
       line-height: 2.5rem; }
   .titulo-principal-montajes {
     margin-top: 40%; }
     .titulo-principal-montajes h1 {
+      font-size: 2.5rem;
+      line-height: 2.5rem; }
+  .titulo-principal-mantenimiento {
+    margin-top: 40%; }
+    .titulo-principal-mantenimiento h1 {
       font-size: 2.5rem;
       line-height: 2.5rem; }
   p {
@@ -588,6 +616,27 @@ footer {
       .contacto-section .bi:hover {
         color: #F59401 !important; }
     .contacto-section h5 {
+      font-size: 0.5rem; }
+  .contacto-mantenimiento {
+    height: 100%;
+    background-color: #333333; }
+    .contacto-mantenimiento h2 {
+      font-size: 1rem; }
+    .contacto-mantenimiento a {
+      font-size: 1.2rem; }
+    .contacto-mantenimiento .bi {
+      margin: 15px;
+      font-size: 50px;
+      color: #333333 !important;
+      transform: translate(35px, -39px);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2; }
+      .contacto-mantenimiento .bi:hover {
+        color: #F59401 !important; }
+    .contacto-mantenimiento h5 {
       font-size: 0.5rem; }
   footer p {
     display: flex;
